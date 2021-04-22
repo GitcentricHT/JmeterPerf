@@ -1,12 +1,15 @@
 # JmeterPerf
 TestRepo
 
-Steps 1:Clone https://github.com/GitcentricHT/JmeterPerf.git from Gothub to C:/WIP
+Steps 1: Create a script with HTTP request sampler and listner like Aggregate Report (Sharing RunUsersCMD.jmx file)
 
-Step 2: Go inside JmeterPerf folder
+Steps 2: In Thread Group make sure you have use function with variable for thread to increase user from command line ${__P(User,1)}
 
-Step 3: Under this folder write command jmeter -n -t "CSV Data Set Config.jmx" -l "CSVABC.csv" -e -o"Report04142021"
+Step 3: To run this script from CMD use this command jmeter -n -t"path\RunUsersCMD.jmx" -l "path\CMDUserPerf.csv"
 
-Step 4: Check your file under the folder you have generated
+Step 4 : To set threads from command line use command:
 
+jmeter -n -t"path\RunUsersCMD.jmx" -l "path\CMDUserPerf.csv" -JUser=5 -JRampPeriod=5
+
+Step 5 :  Hit enter
 
